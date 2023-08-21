@@ -29,6 +29,17 @@ public class MainFormController {
 
     }
 
-    public void mnitemAboutUsOnAction(ActionEvent actionEvent) {
+    public void mnitemAboutUsOnAction(ActionEvent actionEvent)throws Exception {
+        AnchorPane scene2Root = FXMLLoader.load(getClass().getResource("/view/Scene2.fxml"));
+        Scene mainScene1 = new Scene(scene2Root);
+
+        Stage stage = new Stage();
+
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(root.getScene().getWindow());
+
+        stage.setScene(mainScene1);
+        stage.setTitle("About Us");
+        stage.show();
     }
 }
