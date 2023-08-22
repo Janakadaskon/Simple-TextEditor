@@ -6,19 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.web.HTMLEditor?>
 
-
 <AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.MainFormController">
    <children>
       <MenuBar layoutY="-2.0" prefHeight="27.0" prefWidth="600.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="New" />
-                  <MenuItem mnemonicParsing="false" text="Open" />
+              <MenuItem fx:id="itemNew" mnemonicParsing="false" onAction="#itemNewOnAction" text="New" />
+                  <MenuItem fx:id="itemOpen" mnemonicParsing="false" onAction="#itemOpenOnAction" text="Open" />
                   <MenuItem mnemonicParsing="false" text="Save " />
                   <MenuItem mnemonicParsing="false" text="Save as" />
                   <MenuItem mnemonicParsing="false" text="Print" />
-                  <MenuItem mnemonicParsing="false" text="Exit" />
+                  <MenuItem fx:id="itemExit" mnemonicParsing="false" onAction="#itemExitOnAction" text="Exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -31,12 +30,12 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-                  <MenuItem fx:id="mnitemUserGuide" mnemonicParsing="false" onAction="#mnitemUserGuideOnAction" text="User Guide" />
-                  <MenuItem fx:id="mnitemAboutUs" mnemonicParsing="false" onAction="#mnitemAboutUsOnAction" text="About Us" />
+                  <MenuItem fx:id="itemUserGuide" mnemonicParsing="false" onAction="#itemUserGuideOnAction" text="User Guide" />
+                  <MenuItem fx:id="itemAboutUs" mnemonicParsing="false" onAction="#itemAboutUsOnAction" text="About Us" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="-1.0" layoutY="25.0" prefHeight="375.0" prefWidth="600.0" />
+      <HTMLEditor fx:id="txtArea" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="-1.0" layoutY="25.0" prefHeight="375.0" prefWidth="600.0" />
    </children>
 </AnchorPane>
