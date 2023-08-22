@@ -1,5 +1,6 @@
 package lk.ijse.dep11;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -30,6 +31,7 @@ public class MainFormController {
     }
 
     public void itemExitOnAction(ActionEvent actionEvent) {
+        Platform.exit();
     }
 
     public void itemUserGuideOnAction(ActionEvent actionEvent) throws Exception{
