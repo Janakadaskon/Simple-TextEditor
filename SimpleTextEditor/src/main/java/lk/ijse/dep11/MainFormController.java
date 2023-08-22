@@ -2,14 +2,18 @@ package lk.ijse.dep11;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class MainFormController {
     public AnchorPane root;
@@ -52,14 +56,27 @@ public class MainFormController {
     public void itemAboutUsOnAction(ActionEvent actionEvent) throws Exception{
         AnchorPane scene2Root = FXMLLoader.load(getClass().getResource("/view/Scene2.fxml"));
         Scene mainScene1 = new Scene(scene2Root);
-
         Stage stage = new Stage();
+        stage.setTitle("About Us");
 
         stage.initModality(Modality.WINDOW_MODAL);
         stage.initOwner(root.getScene().getWindow());
 
+        stage.initStyle(StageStyle.TRANSPARENT);
+        scene2Root.setBackground(Background.fill(Color.TRANSPARENT));
+        mainScene1.setFill(Color.TRANSPARENT);
+
         stage.setScene(mainScene1);
-        stage.setTitle("About Us");
         stage.show();
+        stage.centerOnScreen();
+    }
+
+    public void start(Stage primaryStage)throws Exception{
+        AnchorPane root = FXMLLoader.load(getClass().getResource("/view/MainForm.fxml"));
+        Scene mainScene = new Scene(root);
+        primaryStage.setScene(mainScene);
+        primaryStage.setTitle("Undecorated Windows");
+
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
     }
 }
