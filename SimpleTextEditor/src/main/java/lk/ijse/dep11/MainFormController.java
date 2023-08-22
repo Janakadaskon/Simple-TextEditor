@@ -56,19 +56,16 @@ public class MainFormController {
     public void itemAboutUsOnAction(ActionEvent actionEvent) throws Exception{
         AnchorPane scene2Root = FXMLLoader.load(getClass().getResource("/view/Scene2.fxml"));
         Scene mainScene1 = new Scene(scene2Root);
-        Stage stage = new Stage();
-        stage.setTitle("About Us");
+        Stage stage1 = new Stage();
+        stage1.setScene(mainScene1);
+        stage1.setTitle("About Us");
 
-        stage.initModality(Modality.WINDOW_MODAL);
-        stage.initOwner(root.getScene().getWindow());
-
-        stage.initStyle(StageStyle.TRANSPARENT);
+        stage1.initStyle(StageStyle.TRANSPARENT);
         scene2Root.setBackground(Background.fill(Color.TRANSPARENT));
         mainScene1.setFill(Color.TRANSPARENT);
 
-        stage.setScene(mainScene1);
-        stage.show();
-        stage.centerOnScreen();
+        stage1.show();
+        stage1.centerOnScreen();
     }
 
     public void start(Stage primaryStage)throws Exception{

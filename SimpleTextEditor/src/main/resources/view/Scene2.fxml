@@ -5,13 +5,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.Scene2">
    <children>
       <Label layoutX="157.0" layoutY="344.0" text="\@ Copyright." />
-      <ImageView fitHeight="344.0" fitWidth="328.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="129.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../Downloads/84d79b3f98ce51d8ab3f56824d493ebd.png" />
+            <Image url="@../../../../../../../../../Downloads/WhatsApp%20Image%202023-08-22%20at%2009.56.28.jpeg" />
          </image>
       </ImageView>
    </children>
